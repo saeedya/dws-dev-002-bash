@@ -1,0 +1,28 @@
+#!/bin/bash
+# This script will execute "try -i 15 -n 10 flask app test"
+
+cmd=$6
+arg1=$7
+arg2=$8
+
+NUMBER=$5
+INTERVAL=$3
+
+function run_cmd {
+        $($cmd $arg1 $arg2)
+}
+
+run_cmd
+if [[ $? -eq 0 ]]; then
+        exit 0
+else
+        for i in $(seq $NUMBER); do
+                sleep $INTERVAL
+                run_cmd
+                if [[ $? -eq 0 ]]; then
+                        exit 0
+                fi
+        done
+fi
+echo "error!!!!"
+exit 1
