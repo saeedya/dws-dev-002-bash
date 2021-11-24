@@ -6,7 +6,7 @@ read -p "Enter your input: " input
 # Creating array from input
 input_array=($input)
 
-# This function is for iteration N times and wait for N Seconds run "command_run" again
+# This function is for iteration N times and wait for N Seconds, the run "command_run" function again
 function iteration_func {
 	for i in $(seq ${input_array[4]}); do
 		sleep ${input_array[2]}
