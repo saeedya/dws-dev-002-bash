@@ -36,5 +36,5 @@ fi
 # Finally if "iteration_func" does not exit 0, print an error and exit 1
 echo "We have an error!!!!"
 $(false)
-echo $?
+>2& echo $?
 exit 0
