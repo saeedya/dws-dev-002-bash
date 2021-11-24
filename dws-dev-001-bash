@@ -9,11 +9,11 @@ input_array=($input)
 # This function is for iteration N times and wait for N Seconds, the run "command_run" function again
 function iteration_func {
 	for i in $(seq ${input_array[4]}); do
-		sleep ${input_array[2]}
+	    sleep ${input_array[2]}
 	    command_run
-	     if [[ $? -eq 0 ]]; then
-			exit 0	
-		fi		
+	    if [[ $? -eq 0 ]]; then
+	       exit 0	
+	    fi		
 	done
 }
 
