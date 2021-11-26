@@ -28,12 +28,10 @@ if [[ -z "$input" ]]; then
 	
 	if [[ -z "${TRY_INTERVAL}" ]]; then
 		TRY_INTERVAL=5
-		#echo $TRY_INTERVAL
 	fi
 	
 	if [[ -z "${TRY_NUMBER}" ]]; then
 		TRY_NUMBER=12
-		#echo $TRY_NUMBER
 	fi
 	$TRY_COMMAND
 	
