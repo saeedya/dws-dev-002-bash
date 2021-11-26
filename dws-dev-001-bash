@@ -44,5 +44,4 @@ fi
 # Finally if "iteration_func" does not exit 0, print an error and exit 1
 echo "We have an error!!!!"
 $(false)
->&2 echo $? 
-#exit 0
+>&2 echo $?
